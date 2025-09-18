@@ -15,6 +15,31 @@
         .testimonial-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
         .gradient-bg { background-image: linear-gradient(to right, #3B82F6, #1E3A8A); }
+        .flow-box {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            padding: 2rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .flow-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            margin-bottom: 1rem;
+            background-image: linear-gradient(45deg, #60A5FA, #3B82F6);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            color: white;
+            font-size: 2.5rem;
+            transition: transform 0.3s ease;
+        }
+        .flow-step:hover .flow-icon-wrapper {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -116,6 +141,71 @@
                         「導入後、メンバーからの同じ質問が劇的に減りました。新しいメンバーもすぐにコミュニティのナレッジを活用でき、運営の負担が軽くなりました。」
                     </p>
                     <p class="mt-4 text-right text-gray-500">- 不動産コミュニティ運営者</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow Diagram Section -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">サービスの仕組み：AIが「知」を紡ぎ出すプロセス</h2>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+            <!-- Step 1 -->
+            <div class="flow-step flex flex-col items-center mb-8 lg:mb-0 lg:mr-8 flex-1">
+                <div class="flow-icon-wrapper">
+                    <p>📥</p>
+                </div>
+                <div class="flow-box">
+                    <h3 class="text-xl font-bold mb-2">① 情報源</h3>
+                    <p class="text-gray-600">コミュニティのLINEやりとり、動画、資料を自動収集。</p>
+                </div>
+            </div>
+            <div class="text-3xl lg:text-5xl text-gray-400 lg:py-0 py-8 lg:rotate-0 rotate-90">➔</div>
+            
+            <!-- Step 2 -->
+            <div class="flow-step flex flex-col items-center mb-8 lg:mb-0 lg:mr-8 flex-1">
+                <div class="flow-icon-wrapper">
+                    <p>🤖</p>
+                </div>
+                <div class="flow-box">
+                    <h3 class="text-xl font-bold mb-2">② AIによる判定</h3>
+                    <p class="text-gray-600">情報が適切か、不要な雑談かをAIが正確に判定。</p>
+                </div>
+            </div>
+            <div class="text-3xl lg:text-5xl text-gray-400 lg:py-0 py-8 lg:rotate-0 rotate-90">➔</div>
+            
+            <!-- Step 3 -->
+            <div class="flow-step flex flex-col items-center mb-8 lg:mb-0 lg:mr-8 flex-1">
+                <div class="flow-icon-wrapper">
+                    <p>💾</p>
+                </div>
+                <div class="flow-box">
+                    <h3 class="text-xl font-bold mb-2">③ 情報保存</h3>
+                    <p class="text-gray-600">有用な情報のみを「知識ベース」として保存。</p>
+                </div>
+            </div>
+            <div class="text-3xl lg:text-5xl text-gray-400 lg:py-0 py-8 lg:rotate-0 rotate-90">➔</div>
+
+            <!-- Step 4 -->
+            <div class="flow-step flex flex-col items-center mb-8 lg:mb-0 lg:mr-8 flex-1">
+                <div class="flow-icon-wrapper">
+                    <p>❓</p>
+                </div>
+                <div class="flow-box">
+                    <h3 class="text-xl font-bold mb-2">④ メンバーが質問</h3>
+                    <p class="text-gray-600">LINEでAIボットに質問を投げかける。</p>
+                </div>
+            </div>
+            <div class="text-3xl lg:text-5xl text-gray-400 lg:py-0 py-8 lg:rotate-0 rotate-90">➔</div>
+
+            <!-- Step 5 -->
+            <div class="flow-step flex flex-col items-center flex-1">
+                <div class="flow-icon-wrapper">
+                    <p>💡</p>
+                </div>
+                <div class="flow-box">
+                    <h3 class="text-xl font-bold mb-2">⑤ 最適解を回答</h3>
+                    <p class="text-gray-600">過去の情報ソースから最適解を参照元と合わせて回答。</p>
                 </div>
             </div>
         </div>
