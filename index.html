@@ -1,171 +1,240 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIコミュニティチャットボットのご提案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8f9fa; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) { .chart-container { height: 400px; } }
+        .section-title { color: #1E3A8A; }
+        .card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); padding: 2rem; }
+        .tab-btn { transition: all 0.3s; }
+        .tab-btn.active { background-color: #3B82F6; color: white; }
+        .tab-btn:not(.active) { background-color: #E0E7FF; color: #1E3A8A; }
+    </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="ja" class="scroll-smooth"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;AIコミュニティチャットボットのご提案&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8f9fa; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.chart-container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 450px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-left: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-right: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 350px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-height: 400px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (min-width: 768px) { .chart-container { height: 400px; } }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.section-title { color: #1E3A8A; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); padding: 2rem; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn { transition: all 0.3s; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn.active { background-color: #3B82F6; color: white; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn:not(.active) { background-color: #E0E7FF; color: #1E3A8A; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="text-gray-800"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="bg-gradient-to-br from-[#1E3A8A] to-[#111827] text-white text-center py-20 px-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-4xl md:text-5xl font-black mb-2"&gt;AIコミュニティチャットボット&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-xl md:text-2xl font-bold text-gray-300"&gt;コミュニティの「知」を、本物の資産に変える&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="container mx-auto px-4 py-16"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="problem" class="mb-24"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title"&gt;1. 課題: コミュニティが抱える「情報の壁」&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-3 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-4"&gt;情報が散乱し、埋没する&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;チャット、資料、動画など、情報が多すぎて必要なものが見つからない。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-4"&gt;知識の属人化&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;「誰に聞けばよいか」が分からず、特定メンバーに質問が集中する。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-4"&gt;情報の鮮度と整理の限界&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;日々変化する専門情報（融資、補助金など）の追跡が困難。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="solution" class="mb-24"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title"&gt;2. 解決策: 新しいコミュニティ情報活用&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-col md:flex-row items-center justify-around text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="w-full md:w-1/3 mb-8 md:mb-0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold mb-2 text-red-600"&gt;Before: Chaos&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-lg"&gt;情報が散乱&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-4xl font-bold text-blue-600 mx-8 mb-8 md:mb-0"&gt;→&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="w-full md:w-1/3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;AIを活用したチャットボット&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="list-disc list-inside text-left"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;情報の一元化、整理・保存・検索を自動化&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;普段使いのチャット（Slack/LINE）に溶け込む&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="value" class="mb-24"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title"&gt;3. 提供価値: コミュニティの「知」を強力な資産へ&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-3 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;ナレッジの一元化&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;情報の散逸を防ぎ、コミュニティの知識を永続的な資産として蓄積。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;迅速な情報アクセス&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;必要な情報に素早くアクセス可能。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;信頼性の高い回答&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;全回答に参照元を付与し、安心感を提供。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="features" class="mb-24"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title"&gt;4. 主な機能: 3つのステップ&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-center mb-8 border-b"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="tab-collect" class="tab-btn active font-bold py-2 px-6 rounded-t-lg"&gt;1. 収集&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="tab-organize" class="tab-btn font-bold py-2 px-6 rounded-t-lg"&gt;2. 整理・検索&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="tab-respond" class="tab-btn font-bold py-2 px-6 rounded-t-lg"&gt;3. 応答&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="content-collect" class="tab-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;収集機能&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside space-y-2 text-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;マルチプラットフォーム対応（LINE/Slack/Discord）&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;動画・音声の文字起こし&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;資料アップロード（PDF, Word, PPT）&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="content-organize" class="tab-content hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;整理・検索機能&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside space-y-2 text-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;AIによるノイズ除去&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;テーマ分類・タグ付け&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;高精度な検索&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="content-respond" class="tab-content hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;応答機能&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside space-y-2 text-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;チャットボットとして稼働&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;要約と参照元を付与した回答&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="ux" class="mb-24"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title"&gt;5. ユーザー体験: 「いつもの場所」で、ストレスフリー&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-center text-lg mb-8"&gt;優れたユーザー体験は、4つの要素から構成されます。私たちのチャットボットは、特に「自然な会話」を最重要視し、シームレスな対話を実現します。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;canvas id="uxChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="future" class="mb-24"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title"&gt;6. 将来的な展望: コミュニティと「知」の進化&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="relative pl-8 border-l-4 border-blue-300"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-12 pl-8 relative card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute -left-[2.7rem] top-8 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;業界特化型カスタマイズ&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;不動産、教育、スタートアップなど、各コミュニティに最適化。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-12 pl-8 relative card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute -left-[2.7rem] top-8 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-2"&gt;運営改善インサイト&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;トレンド分析や頻出テーマから、運営に役立つ示唆を提供。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="pl-8 relative card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute -left-[2.7rem] top-8 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font</p>
+<body class="text-gray-800">
+
+    <header class="bg-gradient-to-br from-[#1E3A8A] to-[#111827] text-white text-center py-20 px-4">
+        <h1 class="text-4xl md:text-5xl font-black mb-2">AIコミュニティチャットボット</h1>
+        <p class="text-xl md:text-2xl font-bold text-gray-300">コミュニティの「知」を、本物の資産に変える</p>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+
+        <section id="problem" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">1. 課題: コミュニティが抱える「情報の壁」</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold mb-4">情報が散乱し、埋没する</h3>
+                    <p>チャット、資料、動画など、情報が多すぎて必要なものが見つからない。</p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold mb-4">知識の属人化</h3>
+                    <p>「誰に聞けばよいか」が分からず、特定メンバーに質問が集中する。</p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold mb-4">情報の鮮度と整理の限界</h3>
+                    <p>日々変化する専門情報（融資、補助金など）の追跡が困難。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">2. 解決策: 新しいコミュニティ情報活用</h2>
+            <div class="card">
+                <div class="flex flex-col md:flex-row items-center justify-around text-center">
+                    <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2 text-red-600">Before: Chaos</h3>
+                        <p class="text-lg">情報が散乱</p>
+                    </div>
+                    <div class="text-4xl font-bold text-blue-600 mx-8 mb-8 md:mb-0">→</div>
+                    <div class="w-full md:w-1/3">
+                        <h3 class="text-2xl font-bold mb-4">AIを活用したチャットボット</h3>
+                        <ul class="list-disc list-inside text-left">
+                            <li>情報の一元化、整理・保存・検索を自動化</li>
+                            <li>普段使いのチャット（Slack/LINE）に溶け込む</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="value" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">3. 提供価値: コミュニティの「知」を強力な資産へ</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-2">ナレッジの一元化</h3>
+                    <p>情報の散逸を防ぎ、コミュニティの知識を永続的な資産として蓄積。</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-2">迅速な情報アクセス</h3>
+                    <p>必要な情報に素早くアクセス可能。</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-2">信頼性の高い回答</h3>
+                    <p>全回答に参照元を付与し、安心感を提供。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">4. 主な機能: 3つのステップ</h2>
+            <div class="card">
+                <div class="flex justify-center mb-8 border-b">
+                    <button id="tab-collect" class="tab-btn active font-bold py-2 px-6 rounded-t-lg">1. 収集</button>
+                    <button id="tab-organize" class="tab-btn font-bold py-2 px-6 rounded-t-lg">2. 整理・検索</button>
+                    <button id="tab-respond" class="tab-btn font-bold py-2 px-6 rounded-t-lg">3. 応答</button>
+                </div>
+                <div id="content-collect" class="tab-content">
+                    <h3 class="text-2xl font-bold mb-4">収集機能</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>マルチプラットフォーム対応（LINE/Slack/Discord）</li>
+                        <li>動画・音声の文字起こし</li>
+                        <li>資料アップロード（PDF, Word, PPT）</li>
+                    </ul>
+                </div>
+                <div id="content-organize" class="tab-content hidden">
+                    <h3 class="text-2xl font-bold mb-4">整理・検索機能</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>AIによるノイズ除去</li>
+                        <li>テーマ分類・タグ付け</li>
+                        <li>高精度な検索</li>
+                    </ul>
+                </div>
+                <div id="content-respond" class="tab-content hidden">
+                    <h3 class="text-2xl font-bold mb-4">応答機能</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>チャットボットとして稼働</li>
+                        <li>要約と参照元を付与した回答</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="ux" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">5. ユーザー体験: 「いつもの場所」で、ストレスフリー</h2>
+            <div class="card">
+                <p class="text-center text-lg mb-8">優れたユーザー体験は、4つの要素から構成されます。私たちのチャットボットは、特に「自然な会話」を最重要視し、シームレスな対話を実現します。</p>
+                <div class="chart-container">
+                    <canvas id="uxChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">6. 将来的な展望: コミュニティと「知」の進化</h2>
+            <div class="relative pl-8 border-l-4 border-blue-300">
+                <div class="mb-12 pl-8 relative card">
+                    <div class="absolute -left-[2.7rem] top-8 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold mb-2">業界特化型カスタマイズ</h3>
+                    <p>不動産、教育、スタートアップなど、各コミュニティに最適化。</p>
+                </div>
+                <div class="mb-12 pl-8 relative card">
+                    <div class="absolute -left-[2.7rem] top-8 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold mb-2">運営改善インサイト</h3>
+                    <p>トレンド分析や頻出テーマから、運営に役立つ示唆を提供。</p>
+                </div>
+                <div class="pl-8 relative card">
+                    <div class="absolute -left-[2.7rem] top-8 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold mb-2">多角的なマネタイズ</h3>
+                    <p>サブスクリプション、ホワイトレーベル提供、データ分析レポート販売。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="summary" class="text-center bg-white py-16 px-4 rounded-lg shadow-lg">
+             <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">7. まとめ</h2>
+             <p class="text-2xl font-bold text-gray-700 mb-8">コミュニティの未来を、共に創る。</p>
+             <p class="text-lg max-w-3xl mx-auto">ご興味をお持ちいただけましたら、ぜひ詳細についてお話しさせてください。</p>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#111827] text-white text-center py-6">
+        <p>&copy; 2025 AI Community Chatbot Proposal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tab functionality
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(item => item.classList.remove('active'));
+                    tab.classList.add('active');
+                    const targetId = 'content-' + tab.id.split('-')[1];
+                    contents.forEach(content => {
+                        if (content.id === targetId) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // Chart.js UX Donut Chart
+            const uxChartCtx = document.getElementById('uxChart');
+            if(uxChartCtx) {
+                new Chart(uxChartCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['自然な会話', '瞬時の履歴把握', '詳細へのアクセス', 'パーソナルナレッジベース'],
+                        datasets: [{
+                            label: 'ユーザー体験の構成要素',
+                            data: [40, 30, 20, 10],
+                            backgroundColor: ['#3B82F6', '#60A5FA', '#93C5FD', '#BFDBFE'],
+                            borderColor: '#FFFFFF',
+                            borderWidth: 4,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: '#111827',
+                                    font: { size: 14 }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: function(tooltipItems) {
+                                        const item = tooltipItems[0];
+                                        let label = item.chart.data.labels[item.dataIndex];
+                                        if (Array.isArray(label)) {
+                                          return label.join(' ');
+                                        } else {
+                                          return label;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
